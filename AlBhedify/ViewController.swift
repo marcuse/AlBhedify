@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     @IBAction func shareClicked(sender: AnyObject) {
         let objectsToShare = [content.text]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        self.presentViewController((activityVC), animated: true, completion: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
