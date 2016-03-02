@@ -41,6 +41,12 @@ class ViewController: UIViewController {
         content.text = translatedText
     }
     
+    @IBAction func shareClicked(sender: AnyObject) {
+        let objectsToShare = [content.text]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        self.presentViewController((activityVC), animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
