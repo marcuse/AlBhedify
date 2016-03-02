@@ -21,16 +21,16 @@ class AlBhedifyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEnglishToAlBhed() {
+        let text = "Greetings from the Gullwings!"
+        let result = AlBhedTranslator.toAlBhed(text)
+        XCTAssertEqual(result, "Knaadehkc vnus dra Kimmfehkc!")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testAlBhedToEnglish() {
+        let text = "Ouin sudran fyc y ryscdan yht ouin vydran csamd uv amtanpanneac!"
+        let result = AlBhedTranslator.toEnglish(text)
+        XCTAssertEqual(result, "Your mother was a hamster and your father smelt of elderberries!")
     }
     
 }
