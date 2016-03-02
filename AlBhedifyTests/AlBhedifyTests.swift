@@ -33,4 +33,10 @@ class AlBhedifyTests: XCTestCase {
         XCTAssertEqual(result, "Your mother was a hamster and your father smelt of elderberries!")
     }
     
+    func testReversibleTranslation() {
+        let text = "Space, the final frontier. These are the voyages of the Starship Enterprise."
+        let result = AlBhedTranslator.toEnglish(AlBhedTranslator.toAlBhed(text))
+        XCTAssertEqual(text, result)
+    }
+    
 }
