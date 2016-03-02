@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,26 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Greetings from Spira!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NFD-PC-LZJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Greetings from Spira!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NFD-PC-LZJ">
                                 <rect key="frame" x="20" y="57" width="560" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xT-Ow-ERs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xT-Ow-ERs">
                                 <rect key="frame" x="262" y="28" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHy-b5-We5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHy-b5-We5">
                                 <rect key="frame" x="268" y="550" width="64" height="30"/>
                                 <state key="normal" title="Translate"/>
                                 <connections>
                                     <action selector="translateClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBy-OI-CoF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-1l-NUE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-1l-NUE">
                                 <rect key="frame" x="28" y="550" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -45,6 +46,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5xT-Ow-ERs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0Xx-Qt-inB"/>
+                            <constraint firstItem="CHy-b5-We5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DcM-Ui-i89"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NFD-PC-LZJ" secondAttribute="leading" id="F9U-Bx-JIr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NFD-PC-LZJ" secondAttribute="trailing" id="UJV-yT-lda"/>
+                            <constraint firstItem="CHy-b5-We5" firstAttribute="top" secondItem="NFD-PC-LZJ" secondAttribute="bottom" constant="8" id="ZRa-sg-Mqv"/>
+                            <constraint firstItem="NFD-PC-LZJ" firstAttribute="top" secondItem="5xT-Ow-ERs" secondAttribute="bottom" constant="8" id="cLB-XI-1V7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CHy-b5-We5" secondAttribute="bottom" constant="20" id="mWW-WL-68N"/>
+                            <constraint firstItem="VIP-1l-NUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="sda-DQ-tuM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VIP-1l-NUE" secondAttribute="bottom" constant="20" id="srD-VW-Q6h"/>
+                            <constraint firstItem="5xT-Ow-ERs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvk-QB-kBs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="content" destination="NFD-PC-LZJ" id="E0S-ad-lOH"/>
