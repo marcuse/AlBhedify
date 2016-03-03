@@ -8,12 +8,7 @@
 
 import UIKit
 
-enum Language {
-    case English
-    case AlBhed
-}
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var language: UILabel!
@@ -24,7 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        switchLanguage(.English)
+        content.delegate = self
+        restoreValues()
     }
 
     @IBAction func translateClicked(sender: AnyObject) {
@@ -39,6 +35,8 @@ class ViewController: UIViewController {
             switchLanguage(.English)
         }
         content.text = translatedText
+        
+        storeValues()
     }
     
     @IBAction func shareClicked(sender: AnyObject) {
@@ -47,11 +45,38 @@ class ViewController: UIViewController {
         self.presentViewController(activityVC, animated: true, completion: nil)
     }
     
+    func textViewDidEndEditing(textView: UITextView) {
+        storeValues()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    private func storeValues() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setValue(currentLanguage.rawValue, forKey: "currentLanguage")
+        defaults.setValue(content.text, forKey: "content")
+    }
+    
+    private func restoreValues() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let storedLanguageId = defaults.integerForKey("currentLanguage")
+        if let storedLanguage = Language(rawValue: storedLanguageId) {
+            switchLanguage(storedLanguage)
+        }
+        else {
+            switchLanguage(.English)
+        }
+        
+        if let storedContent = defaults.stringForKey("content") {
+            content.text = storedContent
+        }
+    }
+    
     private func switchLanguage(newLanguage: Language) {
         currentLanguage = newLanguage
         if newLanguage == .English {
