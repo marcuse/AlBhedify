@@ -78,6 +78,12 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     private func switchLanguage(newLanguage: Language) {
+        let transition = CATransition()
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionPush
+        transition.duration = 0.25
+        language.layer.addAnimation(transition, forKey: kCATransitionPush)
+
         currentLanguage = newLanguage
         if newLanguage == .English {
             language.text = "English"
