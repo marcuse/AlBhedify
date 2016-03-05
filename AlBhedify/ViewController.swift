@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var language: UILabel!
+    @IBOutlet weak var share: UIButton!
     
     private var currentLanguage: Language = .English
     
@@ -42,6 +43,8 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBAction func shareClicked(sender: AnyObject) {
         let objectsToShare = [content.text]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = share
+        activityVC.popoverPresentationController?.sourceRect = share.bounds
         self.presentViewController(activityVC, animated: true, completion: nil)
     }
     

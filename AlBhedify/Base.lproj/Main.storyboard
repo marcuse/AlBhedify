@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="content" destination="NFD-PC-LZJ" id="E0S-ad-lOH"/>
                         <outlet property="language" destination="5xT-Ow-ERs" id="tp8-5X-FW7"/>
+                        <outlet property="share" destination="VIP-1l-NUE" id="7lf-ZM-Cl2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
