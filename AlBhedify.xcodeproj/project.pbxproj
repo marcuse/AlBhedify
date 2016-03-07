@@ -16,6 +16,7 @@
 		2C3B7A7D1C86F98F008DB485 /* AlBhedifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7A7C1C86F98F008DB485 /* AlBhedifyUITests.swift */; };
 		2C3B7A8B1C86F9EE008DB485 /* AlBhedTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7A8A1C86F9EE008DB485 /* AlBhedTranslator.swift */; };
 		2C58FE6C1C8884B500C51CB8 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58FE6B1C8884B500C51CB8 /* Language.swift */; };
+		2CC9846F1C8DC41100F168D8 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9846E1C8DC41100F168D8 /* AboutController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2C3B7A7E1C86F98F008DB485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C3B7A8A1C86F9EE008DB485 /* AlBhedTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlBhedTranslator.swift; sourceTree = "<group>"; };
 		2C58FE6B1C8884B500C51CB8 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		2CC9846E1C8DC41100F168D8 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2C3B7A651C86F98F008DB485 /* LaunchScreen.storyboard */,
 				2C3B7A681C86F98F008DB485 /* Info.plist */,
 				2C58FE6B1C8884B500C51CB8 /* Language.swift */,
+				2CC9846E1C8DC41100F168D8 /* AboutController.swift */,
 			);
 			path = AlBhedify;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3B7A5F1C86F98F008DB485 /* ViewController.swift in Sources */,
+				2CC9846F1C8DC41100F168D8 /* AboutController.swift in Sources */,
 				2C58FE6C1C8884B500C51CB8 /* Language.swift in Sources */,
 				2C3B7A5D1C86F98F008DB485 /* AppDelegate.swift in Sources */,
 				2C3B7A8B1C86F9EE008DB485 /* AlBhedTranslator.swift in Sources */,
