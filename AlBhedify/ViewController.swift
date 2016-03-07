@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         content.delegate = self
         restoreValues()
+        setupKeyboardObservers()
     }
 
     @IBAction func translateClicked(sender: AnyObject) {
@@ -46,6 +47,23 @@ class ViewController: UIViewController, UITextViewDelegate {
         activityVC.popoverPresentationController?.sourceView = share
         activityVC.popoverPresentationController?.sourceRect = share.bounds
         self.presentViewController(activityVC, animated: true, completion: nil)
+    }
+    
+    private func setupKeyboardObservers() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidShow:"), name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidHide:"), name: UIKeyboardDidHideNotification, object: nil)
+    }
+    
+    func keyboardDidShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+    }
+
+    func keyboardDidHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y += keyboardSize.height
+        }
     }
     
     func textViewDidEndEditing(textView: UITextView) {
