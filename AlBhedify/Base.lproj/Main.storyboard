@@ -30,48 +30,46 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHy-b5-We5">
-                                <rect key="frame" x="268" y="550" width="64" height="30"/>
-                                <state key="normal" title="Translate"/>
-                                <connections>
-                                    <action selector="translateClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBy-OI-CoF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-1l-NUE">
-                                <rect key="frame" x="28" y="550" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="shareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5Q-30-LYO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wST-Of-S3g" userLabel="About">
-                                <rect key="frame" x="550" y="550" width="30" height="30"/>
-                                <state key="normal" title="?"/>
-                                <connections>
-                                    <segue destination="RV1-wP-343" kind="presentation" id="kB5-x7-Wph"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-N9-MZT">
+                                <rect key="frame" x="0.0" y="554" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Yb8-WW-IIG">
+                                        <connections>
+                                            <action selector="shareClicked:" destination="BYZ-38-t0r" id="NJ1-Dv-vhm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="JYc-a1-F8V"/>
+                                    <barButtonItem title="Translate" id="nvl-Nz-ce7">
+                                        <connections>
+                                            <action selector="translateClicked:" destination="BYZ-38-t0r" id="TYW-Nr-eER"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="ojX-Gh-B1V"/>
+                                    <barButtonItem title="?" id="Pa3-iU-zbq">
+                                        <connections>
+                                            <segue destination="RV1-wP-343" kind="presentation" id="3R4-yW-l9Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5xT-Ow-ERs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0Xx-Qt-inB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wST-Of-S3g" secondAttribute="trailing" id="8hw-nI-3A6"/>
-                            <constraint firstItem="CHy-b5-We5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DcM-Ui-i89"/>
+                            <constraint firstItem="xB4-N9-MZT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1yD-tC-O5b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xB4-N9-MZT" secondAttribute="trailing" constant="-20" id="7CO-tO-ckn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="NFD-PC-LZJ" secondAttribute="leading" id="F9U-Bx-JIr"/>
+                            <constraint firstItem="xB4-N9-MZT" firstAttribute="top" secondItem="NFD-PC-LZJ" secondAttribute="bottom" constant="14" id="IEu-GE-XJ2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NFD-PC-LZJ" secondAttribute="trailing" id="UJV-yT-lda"/>
-                            <constraint firstItem="CHy-b5-We5" firstAttribute="top" secondItem="NFD-PC-LZJ" secondAttribute="bottom" constant="8" id="ZRa-sg-Mqv"/>
                             <constraint firstItem="NFD-PC-LZJ" firstAttribute="top" secondItem="5xT-Ow-ERs" secondAttribute="bottom" constant="8" id="cLB-XI-1V7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CHy-b5-We5" secondAttribute="bottom" constant="20" id="mWW-WL-68N"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wST-Of-S3g" secondAttribute="bottom" constant="20" id="pPL-BU-Pmx"/>
-                            <constraint firstItem="VIP-1l-NUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="sda-DQ-tuM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VIP-1l-NUE" secondAttribute="bottom" constant="20" id="srD-VW-Q6h"/>
                             <constraint firstItem="5xT-Ow-ERs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvk-QB-kBs"/>
+                            <constraint firstItem="xB4-N9-MZT" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zeK-bx-YAw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="content" destination="NFD-PC-LZJ" id="E0S-ad-lOH"/>
                         <outlet property="language" destination="5xT-Ow-ERs" id="tp8-5X-FW7"/>
-                        <outlet property="share" destination="VIP-1l-NUE" id="7lf-ZM-Cl2"/>
+                        <outlet property="toolBar" destination="xB4-N9-MZT" id="dpa-Lf-yva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
