@@ -56,14 +56,12 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     func keyboardDidShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y -= keyboardSize.height
+            self.view.frame.origin.y = -keyboardSize.height
         }
     }
 
     func keyboardDidHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
-        }
+        self.view.frame.origin.y = 0
     }
     
     func textViewDidEndEditing(textView: UITextView) {
