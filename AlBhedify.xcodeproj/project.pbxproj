@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C2C0C381C971CCC00C7B05A /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C0C371C971CCC00C7B05A /* about.html */; };
+		2C2C0C3A1C97249800C7B05A /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C0C391C97249800C7B05A /* about.html */; };
 		2C3B7A5D1C86F98F008DB485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7A5C1C86F98E008DB485 /* AppDelegate.swift */; };
 		2C3B7A5F1C86F98F008DB485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7A5E1C86F98F008DB485 /* ViewController.swift */; };
 		2C3B7A621C86F98F008DB485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B7A601C86F98F008DB485 /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C2C0C371C971CCC00C7B05A /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = ../../../../tmp/about.html; sourceTree = "<group>"; };
+		2C2C0C391C97249800C7B05A /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		2C3B7A591C86F98E008DB485 /* AlBhedify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlBhedify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3B7A5C1C86F98E008DB485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3B7A5E1C86F98F008DB485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				2C3B7A681C86F98F008DB485 /* Info.plist */,
 				2C58FE6B1C8884B500C51CB8 /* Language.swift */,
 				2CC9846E1C8DC41100F168D8 /* AboutController.swift */,
-				2C2C0C371C971CCC00C7B05A /* about.html */,
+				2C2C0C391C97249800C7B05A /* about.html */,
 			);
 			path = AlBhedify;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C2C0C381C971CCC00C7B05A /* about.html in Resources */,
+				2C2C0C3A1C97249800C7B05A /* about.html in Resources */,
 				2C3B7A671C86F98F008DB485 /* LaunchScreen.storyboard in Resources */,
 				2C3B7A641C86F98F008DB485 /* Assets.xcassets in Resources */,
 				2C3B7A621C86F98F008DB485 /* Main.storyboard in Resources */,
